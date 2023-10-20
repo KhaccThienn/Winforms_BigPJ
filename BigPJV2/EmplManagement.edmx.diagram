@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="968278be1bb0441f95b7ae885be96d8b" Name="Diagram1">
+        <EntityTypeShape EntityType="EmplManagementModel.Account" Width="1.5" PointX="5.25" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EmplManagementModel.Department" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EmplManagementModel.Employee" Width="1.5" PointX="3" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EmplManagementModel.Level" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EmplManagementModel.Role" Width="1.5" PointX="3" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EmplManagementModel.Timesheet" Width="1.5" PointX="5.25" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EmplManagementModel.v_getEmployeeInfo" Width="1.5" PointX="7.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EmplManagementModel.v_getEmployeeSalaryMax" Width="1.5" PointX="7.75" PointY="5.75" IsExpanded="true" />
+        <AssociationConnector Association="EmplManagementModel.FK__Accounts__EmpId__4E88ABD4" ManuallyRouted="false" />
+        <AssociationConnector Association="EmplManagementModel.FK__Accounts__RoleId__4F7CD00D" ManuallyRouted="false" />
+        <AssociationConnector Association="EmplManagementModel.FK__Employee__Depart__4316F928" ManuallyRouted="false" />
+        <AssociationConnector Association="EmplManagementModel.FK__Employee__LevelI__4222D4EF" ManuallyRouted="false" />
+        <AssociationConnector Association="EmplManagementModel.FK__Timesheet__Emplo__47DBAE45" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

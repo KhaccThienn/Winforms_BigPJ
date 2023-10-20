@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigPJV2", "BigPJV2\BigPJV2.csproj", "{4904312B-D22A-4EF2-BDC3-E0994E7EFE42}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4904312B-D22A-4EF2-BDC3-E0994E7EFE42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4904312B-D22A-4EF2-BDC3-E0994E7EFE42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4904312B-D22A-4EF2-BDC3-E0994E7EFE42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4904312B-D22A-4EF2-BDC3-E0994E7EFE42}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {273FB5E7-9E08-495D-8BFA-15DEC2E85CAF}
+	EndGlobalSection
+EndGlobal
