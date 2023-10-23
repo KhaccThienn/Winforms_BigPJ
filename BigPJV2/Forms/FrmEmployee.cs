@@ -40,6 +40,7 @@ namespace BigPJV2.Forms
 
             btnDelete.Enabled = false;
             btnUpdate.Enabled = false;
+            btnGenerate.Enabled = false;
 
 
         }
@@ -179,7 +180,7 @@ namespace BigPJV2.Forms
                 var employee = empl.Employees.FirstOrDefault(x => x.Id.ToString() == txtId.Text);
                 if (employee != null)
                 {
-                    
+
                     if (employee.Timesheets.Count > 0)
                     {
                         foreach (var timesheet in employee.Timesheets)
@@ -217,7 +218,8 @@ namespace BigPJV2.Forms
                 MessageBox.Show("Search field is required", "System Notify", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtSearch.Select();
                 return;
-            } else
+            }
+            else
             {
                 dgvEmployees.DataSource = null;
                 var employess = from emp in empl.Employees
@@ -237,7 +239,7 @@ namespace BigPJV2.Forms
                 dgvEmployees.DataSource = employess.ToList();
             }
 
-            
+
         }
 
         private void dgvEmployees_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -266,6 +268,8 @@ namespace BigPJV2.Forms
                 btnAdd.Enabled = false;
                 btnDelete.Enabled = true;
                 btnUpdate.Enabled = true;
+                btnGenerate.Enabled = true;
+
             }
         }
 
@@ -326,5 +330,26 @@ namespace BigPJV2.Forms
             cboDepartments.SelectedItem = cboDepartments.Items[0];
         }
 
+        private void btnGenerate_Click(object sender, EventArgs e)
+        {
+            if (dgvEmployees.CurrentRow != null)
+            {
+                DataGridViewRow row = dgvEmployees.CurrentRow;
+
+                var id = row.Cells[0].Value.ToString();
+
+                var employee = empl.Employees.FirstOrDefault(x => x.Id.ToString() == id);
+
+                if (employee != null)
+                {
+                    FrmGenerateQR frm = new FrmGenerateQR();
+                    frm.emp = employee;
+                    if (!frm.IsOpened)
+                    {
+                        frm.Show();
+                    }
+                }
+            }
+        }
     }
 }
