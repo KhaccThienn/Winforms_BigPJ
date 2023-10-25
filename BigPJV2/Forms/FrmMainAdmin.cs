@@ -15,7 +15,7 @@ namespace BigPJV2.Forms
 
         private void FrmMainAdmin_Load(object sender, EventArgs e)
         {
-            //MessageBox.Show($"Welcome Back, {account.Employee.Name}", "Welcome !", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            MessageBox.Show($"Welcome Back, {account.Employee.Name}", "Welcome !", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
 

@@ -17,7 +17,7 @@ namespace BigPJV2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmEmployee());
+            Application.Run(new FrmDefaultEmployee());
         }
     }
 }

@@ -52,6 +52,11 @@ namespace BigPJV2.Forms
             FetchingEmpData();
 
             ClearForms();
+
+            btnAdd.Enabled = true;
+            btnDelete.Enabled = false;
+            btnUpdate.Enabled = false;
+            btnGenerate.Enabled = false;
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -208,6 +213,8 @@ namespace BigPJV2.Forms
             btnAdd.Enabled = true;
             btnDelete.Enabled = false;
             btnUpdate.Enabled = false;
+            btnGenerate.Enabled = false;
+
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
