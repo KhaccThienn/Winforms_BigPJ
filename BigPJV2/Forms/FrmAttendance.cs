@@ -37,29 +37,31 @@ namespace BigPJV2.Forms
 
             if (ts != null)
             {
-                MessageBox.Show(ts.Employee.Name);
-                MessageBox.Show(DateTime.Now.ToShortDateString().ToString());
-                MessageBox.Show(dateAttendance.ToShortDateString().ToString());
+                //MessageBox.Show(ts.Employee.Name);
+                //MessageBox.Show(DateTime.Now.ToShortDateString().ToString());
+                //MessageBox.Show(dateAttendance.ToShortDateString().ToString());
 
-                MessageBox.Show((DateTime.Now.ToShortDateString().ToString() == dateAttendance.ToShortDateString().ToString()).ToString());
+                //MessageBox.Show((DateTime.Now.ToShortDateString().ToString() == dateAttendance.ToShortDateString().ToString()).ToString());
                 //(DateTime.Now.ToShortDateString().ToString() == attd.AttendanceDate.ToShortDateString().ToString()
                 if (DateTime.Now.ToShortDateString().ToString() == dateAttendance.ToShortDateString().ToString() && ts.Value == 0)
                 {
                     btnStart.Enabled = false;
                     lblEmp.Text = ts.Employee.Name.ToString();
                     lblStatus.Text = ts.Value == 0 ? "Working" : "Completed";
-                } else
+                }
+                else
                 {
                     lblStatus.Text = "Uncheked";
                     btnEnd.Enabled = false;
                 }
-                
-            } else
+
+            }
+            else
             {
                 lblStatus.Text = "Uncheked";
                 btnEnd.Enabled = false;
             }
-            
+
         }
 
         private void btnStart_Click(object sender, EventArgs e)

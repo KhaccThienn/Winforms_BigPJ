@@ -100,8 +100,8 @@ namespace BigPJV2
                 {
                     this.Hide();
 
-                    FrmMainEmployee frmMainEmployee = new FrmMainEmployee();
-                    //frmMainEmployee.account = account;
+                    FrmDefaultEmployee frmMainEmployee = new FrmDefaultEmployee();
+                    frmMainEmployee.account = account;
                     frmMainEmployee.Show();
                 }
 
