@@ -339,24 +339,27 @@ namespace BigPJV2.Forms
 
         private void btnGenerate_Click(object sender, EventArgs e)
         {
-            if (dgvEmployees.CurrentRow != null)
-            {
-                DataGridViewRow row = dgvEmployees.CurrentRow;
+            //if (dgvEmployees.CurrentRow != null)
+            //{
+            //    DataGridViewRow row = dgvEmployees.CurrentRow;
 
-                var id = row.Cells[0].Value.ToString();
+            //    var id = row.Cells[0].Value.ToString();
 
-                var employee = empl.Employees.FirstOrDefault(x => x.Id.ToString() == id);
+            //    var employee = empl.Employees.FirstOrDefault(x => x.Id.ToString() == id);
 
-                if (employee != null)
-                {
-                    FrmGenerateQR frm = new FrmGenerateQR();
-                    frm.emp = employee;
-                    if (!frm.IsOpened)
-                    {
-                        frm.Show();
-                    }
-                }
-            }
+            //    if (employee != null)
+            //    {
+            //        FrmGenerateQR frm = new FrmGenerateQR();
+            //        frm.emp = employee;
+            //        if (!frm.IsOpened)
+            //        {
+            //            frm.Show();
+            //        }
+            //    }
+            //}
+
+
+
         }
     }
 }

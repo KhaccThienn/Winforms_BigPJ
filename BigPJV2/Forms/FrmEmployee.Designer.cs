@@ -315,7 +315,7 @@
             this.btnGenerate.Name = "btnGenerate";
             this.btnGenerate.Size = new System.Drawing.Size(163, 31);
             this.btnGenerate.TabIndex = 29;
-            this.btnGenerate.Text = "Generate QR";
+            this.btnGenerate.Text = "Preview";
             this.btnGenerate.UseVisualStyleBackColor = true;
             this.btnGenerate.Click += new System.EventHandler(this.btnGenerate_Click);
             // 

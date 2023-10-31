@@ -52,6 +52,8 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblTimer = new System.Windows.Forms.ToolStripStatusLabel();
             this.timerDateTimeNow = new System.Windows.Forms.Timer(this.components);
+            this.mnuReport = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -143,6 +145,8 @@
             this.côngCụToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuTimeSheets,
             this.mnuListTimeSheets,
+            this.toolStripSeparator4,
+            this.mnuReport,
             this.toolStripSeparator3,
             this.mnuSleep});
             this.côngCụToolStripMenuItem.Name = "côngCụToolStripMenuItem";
@@ -188,19 +192,19 @@
             // mnuChangePass
             // 
             this.mnuChangePass.Name = "mnuChangePass";
-            this.mnuChangePass.Size = new System.Drawing.Size(207, 26);
+            this.mnuChangePass.Size = new System.Drawing.Size(224, 26);
             this.mnuChangePass.Text = "Change Password";
             this.mnuChangePass.Click += new System.EventHandler(this.mnuChangePass_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(204, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(221, 6);
             // 
             // mnuLogout
             // 
             this.mnuLogout.Name = "mnuLogout";
-            this.mnuLogout.Size = new System.Drawing.Size(207, 26);
+            this.mnuLogout.Size = new System.Drawing.Size(224, 26);
             this.mnuLogout.Text = "Log Out";
             this.mnuLogout.Click += new System.EventHandler(this.mnuLogout_Click);
             // 
@@ -226,6 +230,18 @@
             this.timerDateTimeNow.Enabled = true;
             this.timerDateTimeNow.Interval = 1;
             this.timerDateTimeNow.Tick += new System.EventHandler(this.timerDateTimeNow_Tick);
+            // 
+            // mnuReport
+            // 
+            this.mnuReport.Name = "mnuReport";
+            this.mnuReport.Size = new System.Drawing.Size(254, 26);
+            this.mnuReport.Text = "Reporting";
+            this.mnuReport.Click += new System.EventHandler(this.mnuReport_Click);
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(251, 6);
             // 
             // FrmMainAdmin
             // 
@@ -278,5 +294,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripMenuItem mnuTimeSheets;
         private System.Windows.Forms.ToolStripMenuItem mnuListTimeSheets;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripMenuItem mnuReport;
     }
 }

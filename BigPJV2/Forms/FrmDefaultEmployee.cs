@@ -22,7 +22,7 @@ namespace BigPJV2.Forms
 
         private void FrmDefaultEmployee_Load(object sender, EventArgs e)
         {
-            MessageBox.Show($"Welcome Back, {account.Employee.Name}", "Welcome !", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            //MessageBox.Show($"Welcome Back, {account.Employee.Name}", "Welcome !", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -30,11 +30,6 @@ namespace BigPJV2.Forms
             {
                 item.Close();
             }
-        }
-
-        private void changeProfileToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
@@ -75,6 +70,11 @@ namespace BigPJV2.Forms
         private void FrmDefaultEmployee_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = DateTime.Now.ToString();
         }
     }
 }

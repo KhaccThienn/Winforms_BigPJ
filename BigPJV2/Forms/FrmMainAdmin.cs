@@ -146,6 +146,15 @@ namespace BigPJV2.Forms
             Application.Exit();
         }
 
-       
+        private void mnuReport_Click(object sender, EventArgs e)
+        {
+            FrmReports frm = new FrmReports();
+            frm.MdiParent = this;
+            frm.account = account;
+            if (!frm.IsOpened)
+            {
+                frm.Show();
+            }
+        }
     }
 }
