@@ -22,7 +22,7 @@ namespace BigPJV2.Forms
 
         private void FrmDefaultEmployee_Load(object sender, EventArgs e)
         {
-            //MessageBox.Show($"Welcome Back, {account.Employee.Name}", "Welcome !", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            MessageBox.Show($"Welcome Back, {account.Employee.Name}", "Welcome !", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -61,6 +61,18 @@ namespace BigPJV2.Forms
 
         private void startAttendanceToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            var ts = account.Employee.Timesheets.Where(
+                       x => x.EmployeeId == account.Employee.Id
+                       && DateTime.Now.ToShortDateString().ToString() == x.AttendanceDate.ToShortDateString().ToString()
+                       && x.Value == 1
+                   ).FirstOrDefault();
+
+            if (ts != null)
+            {
+                MessageBox.Show("This employee attended today !", "System Notify", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             FrmAttendance frm = new FrmAttendance();
             frm.employee = account.Employee;
             frm.dateAttendance = DateTime.Now;

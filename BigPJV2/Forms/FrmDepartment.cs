@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,7 +14,8 @@ namespace BigPJV2.Forms
     public partial class FrmDepartment : Form
     {
         EmplManagementEntities empl = new EmplManagementEntities();
-        public bool IsOpened { get; set; } = false;
+        public bool IsOpened { get; set; } = false; 
+        public Account account = null;
         public FrmDepartment()
         {
             InitializeComponent();
@@ -26,6 +28,7 @@ namespace BigPJV2.Forms
         {
             btnDelete.Enabled = false;
             btnUpdate.Enabled = false;
+            button1.Enabled = false;
 
             FetchingAllData();
             ClearForms();
@@ -65,6 +68,8 @@ namespace BigPJV2.Forms
             btnAdd.Enabled = true;
             btnDelete.Enabled = false;
             btnUpdate.Enabled = false;
+            button1.Enabled = false;
+
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -158,6 +163,7 @@ namespace BigPJV2.Forms
                 btnAdd.Enabled = false;
                 btnDelete.Enabled = true;
                 btnUpdate.Enabled = true;
+                button1.Enabled = true;
             }
         }
 
@@ -177,6 +183,24 @@ namespace BigPJV2.Forms
         private void ClearForms()
         {
             txtId.Text = txtName.Text = txtSearch.Text = string.Empty;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var deps = empl.Departments.FirstOrDefault(x => x.Id.ToString() == txtId.Text);
+
+            if (deps != null)
+            {
+                FrmReports frm = new FrmReports();
+                frm.dep = deps;
+                frm.account = account;
+                frm.ReportName = "byDeps";
+                if (!frm.IsOpened)
+                {
+                    frm.Show();
+                }
+
+            }
         }
     }
 }

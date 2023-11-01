@@ -37,6 +37,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnFetch = new System.Windows.Forms.Button();
             this.btnFetchAll = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployee)).BeginInit();
             this.SuspendLayout();
             // 
@@ -119,7 +120,7 @@
             // 
             // btnFetchAll
             // 
-            this.btnFetchAll.Location = new System.Drawing.Point(622, 88);
+            this.btnFetchAll.Location = new System.Drawing.Point(15, 98);
             this.btnFetchAll.Name = "btnFetchAll";
             this.btnFetchAll.Size = new System.Drawing.Size(107, 36);
             this.btnFetchAll.TabIndex = 8;
@@ -127,11 +128,22 @@
             this.btnFetchAll.UseVisualStyleBackColor = true;
             this.btnFetchAll.Click += new System.EventHandler(this.btnFetchAll_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(622, 88);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(157, 36);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Generate Report";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FrmTimeSheets
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1098, 535);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnFetchAll);
             this.Controls.Add(this.btnFetch);
             this.Controls.Add(this.label3);
@@ -163,5 +175,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnFetch;
         private System.Windows.Forms.Button btnFetchAll;
+        private System.Windows.Forms.Button button1;
     }
 }

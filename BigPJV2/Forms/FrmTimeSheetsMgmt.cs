@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,6 +15,7 @@ namespace BigPJV2.Forms
     {
         EmplManagementEntities empl = new EmplManagementEntities();
         public bool IsOpened { get; set; } = false;
+        public Account account = null;
         public FrmTimeSheetsMgmt()
         {
             InitializeComponent();
@@ -66,6 +68,27 @@ namespace BigPJV2.Forms
             }
 
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (txtStart.Value > txtEnd.Value || txtStart.Value.ToShortDateString() == txtEnd.Value.ToShortDateString())
+            {
+                MessageBox.Show("Invalid Date Range !", "System Notify", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else
+            {
+                FrmReports frm = new FrmReports();
+                frm.account = account;
+                frm.txtStart = txtStart.Value;
+                frm.txtEnd = txtEnd.Value;
+                frm.ReportName = "byDateTime";
+                if (!frm.IsOpened)
+                {
+                    frm.Show();
+                }
+            }
         }
     }
 }

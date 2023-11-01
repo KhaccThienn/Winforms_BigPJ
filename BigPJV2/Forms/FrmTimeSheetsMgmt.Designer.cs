@@ -34,6 +34,7 @@
             this.txtStart = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.btnFetch = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTimeSheets)).BeginInit();
             this.SuspendLayout();
             // 
@@ -91,11 +92,22 @@
             this.btnFetch.UseVisualStyleBackColor = true;
             this.btnFetch.Click += new System.EventHandler(this.btnFetch_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(174, 79);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(141, 37);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Reporting...";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FrmTimeSheetsMgmt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(939, 531);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnFetch);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -122,5 +134,6 @@
         private System.Windows.Forms.DateTimePicker txtStart;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnFetch;
+        private System.Windows.Forms.Button button1;
     }
 }

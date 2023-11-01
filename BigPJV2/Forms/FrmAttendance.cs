@@ -33,16 +33,16 @@ namespace BigPJV2.Forms
         private void FetchData()
         {
 
-            this.ts = empl.Timesheets.Where(x => x.EmployeeId == employee.Id).FirstOrDefault();
+            this.ts = empl.Timesheets.Where(x => x.EmployeeId == employee.Id).OrderByDescending(x => x.Id).FirstOrDefault();
 
             if (ts != null)
             {
-                //MessageBox.Show(ts.Employee.Name);
-                //MessageBox.Show(DateTime.Now.ToShortDateString().ToString());
-                //MessageBox.Show(dateAttendance.ToShortDateString().ToString());
+                MessageBox.Show(ts.Employee.Name);
+                MessageBox.Show(DateTime.Now.ToShortDateString().ToString());
+                MessageBox.Show(dateAttendance.ToShortDateString().ToString());
 
-                //MessageBox.Show((DateTime.Now.ToShortDateString().ToString() == dateAttendance.ToShortDateString().ToString()).ToString());
-                //(DateTime.Now.ToShortDateString().ToString() == attd.AttendanceDate.ToShortDateString().ToString()
+                MessageBox.Show((DateTime.Now.ToShortDateString().ToString() == dateAttendance.ToShortDateString().ToString()).ToString());
+
                 if (DateTime.Now.ToShortDateString().ToString() == dateAttendance.ToShortDateString().ToString() && ts.Value == 0)
                 {
                     btnStart.Enabled = false;

@@ -16,6 +16,8 @@ namespace BigPJV2.Forms
     {
         EmplManagementEntities empl = new EmplManagementEntities();
         public bool IsOpened { get; set; } = false;
+
+        public Account account = null;
         public FrmLevels()
         {
             InitializeComponent();
@@ -28,7 +30,7 @@ namespace BigPJV2.Forms
         {
             btnDelete.Enabled = false;
             btnUpdate.Enabled = false;
-
+            button1.Enabled = false;
             FetchingAllData();
             ClearForms();
         }
@@ -151,6 +153,8 @@ namespace BigPJV2.Forms
             btnAdd.Enabled = true;
             btnDelete.Enabled = false;
             btnUpdate.Enabled = false;
+            button1.Enabled = false;
+
         }
 
         private void FetchingAllData()
@@ -183,6 +187,26 @@ namespace BigPJV2.Forms
                 btnAdd.Enabled = false;
                 btnDelete.Enabled = true;
                 btnUpdate.Enabled = true;
+                button1.Enabled = true;
+
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var lvl = empl.Levels.FirstOrDefault(x => x.Id.ToString() == txtId.Text);
+
+            if (lvl != null)
+            {
+                FrmReports frm = new FrmReports();
+                frm.lvl = lvl;
+                frm.account = account;
+                frm.ReportName = "byLvls";
+                if (!frm.IsOpened)
+                {
+                    frm.Show();
+                }
+
             }
         }
     }

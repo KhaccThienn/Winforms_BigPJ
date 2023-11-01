@@ -44,7 +44,7 @@ namespace BigPJV2.Forms
         {
             FrmDepartment frm = new FrmDepartment();
             frm.MdiParent = this;
-
+            frm.account = account;
             if (!frm.IsOpened)
             {
                 frm.Show();
@@ -55,7 +55,7 @@ namespace BigPJV2.Forms
         {
             FrmLevels frm = new FrmLevels();
             frm.MdiParent = this;
-
+            frm.account = account;
             if (!frm.IsOpened)
             {
                 frm.Show();
@@ -89,6 +89,7 @@ namespace BigPJV2.Forms
             FrmTimeSheets frm = new FrmTimeSheets();
             frm.MdiParent = this;
 
+            frm.SignedInAccount = account;
             if (!frm.IsOpened)
             {
                 frm.Show();
@@ -100,7 +101,7 @@ namespace BigPJV2.Forms
 
             FrmTimeSheetsMgmt frm = new FrmTimeSheetsMgmt();
             frm.MdiParent = this;
-
+            frm.account = account;
             if (!frm.IsOpened)
             {
                 frm.Show();
@@ -151,6 +152,7 @@ namespace BigPJV2.Forms
             FrmReports frm = new FrmReports();
             frm.MdiParent = this;
             frm.account = account;
+            frm.ReportName = "allEmps";
             if (!frm.IsOpened)
             {
                 frm.Show();

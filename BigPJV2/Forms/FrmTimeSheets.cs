@@ -117,7 +117,7 @@ namespace BigPJV2.Forms
                     {
                         FrmAttendance frm = new FrmAttendance();
                         frm.employee = employee;
-                        frm.dateAttendance = txtAttendanceDate.Value;
+                        frm.dateAttendance = DateTime.Now;
                         frm.ShowDialog();
                     }
                 }
@@ -147,6 +147,11 @@ namespace BigPJV2.Forms
             FetchingAllData();
             cboDepartments.SelectedItem = cboDepartments.Items[0];
             cboLevels.SelectedItem = cboLevels.Items[0];
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
